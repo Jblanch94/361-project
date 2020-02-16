@@ -1,0 +1,32 @@
+td, th {
+    border: 1px solid black;
+    font-size: 200%;
+}
+
+#newResource, #newProduct {
+    font-size: 150%;
+    max-width: 50%;
+}
+
+caption {
+    font-size: 200%;
+}
+
+.resource-name {
+    font-size: 150%;
+}
+
+#table-container, #button-container  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    margin: auto;
+}
+
+
+#error {
+    color: red;
+    text-align: center;
+    font-size: 2em;
+}

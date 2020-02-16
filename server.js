@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require('express-session');
+var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 const passport = require('passport');
 const path = require('path');
 const db = require('./models/db/db_config');
@@ -66,7 +67,7 @@ app.get('/list', function(req, res, next) {
         }
   
         context.product_list = parameters;
-        res.render('home', context);
+        res.render('list', context);
       });   
   });
 });

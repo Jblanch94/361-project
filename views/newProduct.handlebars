@@ -1,0 +1,13 @@
+<h1> New Product Form </h1>
+<form method="POST" action="/new-product">
+    <label for="name">Product Name: </label>
+    <input type="text" name="name" required><br>
+    <label for="quantity">Quantity: </label>
+    <input type="number" name="quantity">
+    <p>Add quanitities for each resorce that is needed for your new product</p>
+    {{#each inventoryType}}
+    <label for="{{this.name}}" class="resource-name">{{this.name}}:</label>
+    <input type="number" name="{{this.name}}"><br>
+    {{/each}}
+    <input type="submit" value="Submit New Product">
+</form>

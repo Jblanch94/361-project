@@ -1,0 +1,44 @@
+<div id="button-container">
+      <button id="newResource">Create New Resource</button>
+      <button id="newProduct">Create New Product</button>
+</div>
+
+{{#if error}}
+<p id="error">Error: Item already exists</p>
+{{/if}}
+
+<div id="table-container">
+    <table id="resource-table">
+      <caption>Inventory List</caption>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+      <tr>
+
+      {{#if list}}
+      {{#each list}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{this.quantity}}</td>
+      </tr>
+      {{/each}}
+      {{/if}}
+    </table>
+
+    <table id="product-table">
+      <caption>Product List</caption>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+      <tr>
+
+      {{#if product_list}}
+      {{#each product_list}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{this.quantity}}</td>
+      </tr>
+      {{/each}}
+      {{/if}}
+    </table>
+</div>
