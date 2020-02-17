@@ -1,15 +1,22 @@
 const express = require('express');
 const session = require('express-session');
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
+var bodyParser = require('body-parser');
+var mysql = require('./dbcon.js');
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 const passport = require('passport');
 const path = require('path');
 const db = require('./models/db/db_config');
 
 const app = express();
 
+
 app.set('view engine', 'hbs');
 express.static(path.join(__dirname, './views'));
 
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.urlencoded({extended: false}));
 app.use(session({
     secret: 'secret',
