@@ -1,0 +1,40 @@
+<!-- HTML for Adding Employees to Table -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Employees To Database</title>
+</head>
+
+<body style="background:rgb(51, 102, 0)">
+  
+  	<!--Add Employee to Table-->
+	<div style="background:rgb(153, 102, 51); width:50%; margin: auto; border: 5px solid black;">
+		<form action="XXX" method="post">
+		<fieldset id="add-form">
+			<legend id="add-legend"><p>Add Employee to Database:</p></legend>
+
+			*First Name: <input type="text" required name="first_name" id="first_name" placeholder="Employee First Name">
+			<br><br>
+			*Last Name: <input type="text" required name="last_name" id="last_name" placeholder="Employee Last Name">
+			<br><br>
+			*Employee ID Number: <input type="number" min=1 required name="employee_ID" id="employee_ID" placeholder="Employee ID">
+			<br><br>
+			Start Date: <input type="date" name="start_date" id="start_date" placeholder="01/01/2020">
+			<br><br>
+			Status: <input type="text" name="status" id="status" placeholder="Status">
+			<br><br>
+
+			<button type="button" id="addEmployee" value="Add To Database">
+		</fieldset>
+	</form>
+	<br><br>
+	</div>
+
+	<div>
+		<br><br><br><br><br>
+	</div>
+
+	<script src="AddEmployees.js"></script>
+</body>
+</html>
